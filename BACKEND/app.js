@@ -19,6 +19,8 @@ app.use("/api/create",short_url)
 
 app.get("/:id",redirectFromShortUrl);
 
+app.use(errorHandler)
+
 app.listen(3000,()=>{
     connectDB();
     console.log("server is running on http://localhost:3000");
